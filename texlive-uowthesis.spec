@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 A document class for higher degree research theses in
@@ -27,20 +25,12 @@ compliance with the specifications of University of Wollongong
 of Higher Degree Research Theses" (March 2006), by the Research
 Student Centre, Research & Innovation Division, UoW.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -52,7 +42,6 @@ Student Centre, Research & Innovation Division, UoW.
 %doc %{_texmfdistdir}/doc/latex/uowthesis/myThesisBib.bib
 %doc %{_texmfdistdir}/doc/latex/uowthesis/mythesis.pdf
 %doc %{_texmfdistdir}/doc/latex/uowthesis/mythesis.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,5 +52,3 @@ Student Centre, Research & Innovation Division, UoW.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
