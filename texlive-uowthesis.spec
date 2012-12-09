@@ -52,3 +52,16 @@ Student Centre, Research & Innovation Division, UoW.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-2
++ Revision: 757323
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-1
++ Revision: 719856
+- texlive-uowthesis
+- texlive-uowthesis
+- texlive-uowthesis
+
