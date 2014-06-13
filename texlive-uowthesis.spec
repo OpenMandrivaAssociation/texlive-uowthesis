@@ -6,7 +6,7 @@
 # catalog-version 1.0a
 Name:		texlive-uowthesis
 Version:	1.0a
-Release:	6
+Release:	7
 Summary:	Document class for dissertations at the University of Wollongong
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/uowthesis
