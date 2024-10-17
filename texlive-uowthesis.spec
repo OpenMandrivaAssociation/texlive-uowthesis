@@ -3,7 +3,7 @@ Version:	19700
 Release:	2
 Summary:	Document class for dissertations at the University of Wollongong
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/uowthesis
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/uowthesis
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/uowthesis.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/uowthesis.doc.r%{version}.tar.xz
